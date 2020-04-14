@@ -24,5 +24,6 @@ cdef class PyCtxt:
     cdef ENCODING_T _encoding
     cpdef int size_capacity(self)
     cpdef int size(self)
+    cpdef string to_string(self)
     cpdef void save(self, str fileName)
     cpdef void load(self, str fileName, str encoding=*)
