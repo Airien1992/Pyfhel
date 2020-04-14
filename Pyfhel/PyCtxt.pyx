@@ -76,6 +76,9 @@ cdef class PyCtxt:
     cpdef int size(self):
         """int: Actual size of the ciphertext."""
         return self._ptr_ctxt.size()
+    cpdef string to_string(self):
+        """string: Polynomial representation of the plaintext"""
+        return self._ptr_ctxt.to_string()
     
     cpdef void save(self, str fileName):
         """Save the ciphertext into a file.
